@@ -1,0 +1,72 @@
+{
+	"name": "handpressed/wp-multitenancy-boilerplate",
+	"description": "WordPress multitenancy boilerplate configured and managed with Composer and PHP dotenv.",
+	"license": "MIT",
+	"type": "project",
+	"keywords": [
+		"WordPress",
+		"multitenancy",
+		"boilerplate",
+		"phpdotenv",
+		"CMS",
+		"framework",
+		"composer",
+		"wpackagist"
+	],
+	"authors": [
+		{
+			"name": "Nicholas at HandPressed",
+			"email": "nicholas@handpressed.net",
+			"homepage": "https://handpressed.net",
+			"role": "Developer"
+		}
+	],
+	"support": {
+		"source": "https://github.com/handpressed/wp-multitenancy-boilerplate",
+		"issues": "https://github.com/handpressed/wp-multitenancy-boilerplate/issues"
+	},
+	"repositories": {
+		"wpackagist": {
+			"type": "composer",
+			"url": "https://wpackagist.org"
+		}
+	},
+	"require": {
+		"php": ">=5.6",
+		"johnpbloch/wordpress": "@stable",
+		"composer/installers": "@stable",
+		"vlucas/phpdotenv": "^2.4",
+		"roots/wp-password-bcrypt": "1.0.0"
+	},
+	"suggest": {
+		"wp-cli/wp-cli": "@stable"
+	},
+	"extra": {
+		"wordpress-install-dir": "web/wp",
+		"installer-paths": {
+			"web/app/mu-plugins/{$name}": [
+				"type:wordpress-muplugin"
+			],
+			"web/app/plugins/{$name}": [
+				"type:wordpress-plugin"
+			],
+			"web/app/themes/{$name}": [
+				"type:wordpress-theme"
+			]
+		}
+	},
+	"scripts": {
+		"generate-salts": [
+			"echo '<?php' > wp-salts.php && curl -L https://api.wordpress.org/secret-key/1.1/salt/ >> wp-salts.php"
+		],
+		"post-create-project-cmd": [
+			"composer run generate-salts",
+			"php -r \"rename('conf/.env.example', 'conf/.env');\"",
+			"php -r \"rename('web/wp-config.php', 'web/wp/wp-config.php');\"",
+			"php -r \"rename('web/wp', '/var/opt/wp');\"",
+			"php -r \"symlink('/var/opt/wp', 'web/wp');\"",
+			"php -r \"symlink('/var/opt/wp/wp-content/plugins', 'web/app/plugins');\"",
+			"php -r \"symlink('/var/opt/wp/wp-content/themes', 'web/app/themes');\""
+		]
+	}
+}
