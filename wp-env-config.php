@@ -57,8 +57,8 @@ define( 'WP_CONTENT_DIR', WP_ROOT . WP_CONTENT_FOLDER );
 /**
  * Constants.
  */
-if ( file_exists( __DIR__ . '/constants.php' ) ) {
-	require_once __DIR__ . '/constants.php';
+if ( file_exists( __DIR__ . '/wp-constants.php' ) ) {
+	require_once __DIR__ . '/wp-constants.php';
 }
 
 if ( 'https' === $scheme ) {
@@ -75,8 +75,8 @@ define( 'WP_AUTO_UPDATE_CORE', 'minor' );
 /**
  * Authentication unique keys and salts.
  */
-if ( file_exists( __DIR__ . '/salts.php' ) ) {
-	require_once __DIR__ . '/salts.php';
+if ( file_exists( __DIR__ . '/wp-salts.php' ) ) {
+	require_once __DIR__ . '/wp-salts.php';
 }
 
 /**
