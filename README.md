@@ -76,7 +76,7 @@ You can continue to use the WordPress admin to update themes and plugins (you do
 
 Put custom core, theme and plugin constants in `{directory}/wp-constants.php`.
 
-## Adding Sites
+## Adding sites
 
 Coming soon...
 
