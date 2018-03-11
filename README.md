@@ -44,7 +44,7 @@ $ composer create-project handpressed/wp-multitenancy-boilerplate {directory}
 
 Replace `{directory}` with the name of your new project, e.g. its domain name.
 
-Composer will download and install WordPress, move it to `/var/opt/wp` and then symlink it to `{directory}/web/wp`. Composer will also symlink `/var/opt/wp/wp-content/themes` to `web/app/themes`, and `/var/opt/wp/wp-content/plugins` to `web/app/plugins`.
+Composer will download and install WordPress, move it to `/var/opt/wp` and then symlink it to `{directory}/web/wp`. Composer will also symlink `/var/opt/wp/wp-content/themes` to `web/app/themes`, `/var/opt/wp/wp-content/plugins` to `web/app/plugins` and `/var/opt/wp/wp-content/mu-plugins` to `web/app/mu-plugins`.
 
 Sites can now share this single instance of WordPress core, themes and plugins.
 

@@ -65,8 +65,10 @@
 			"php -r \"rename('web/wp-config.php', 'web/wp/wp-config.php');\"",
 			"php -r \"rename('web/wp', '/var/opt/wp');\"",
 			"php -r \"symlink('/var/opt/wp', 'web/wp');\"",
+			"php -r \"symlink('/var/opt/wp/wp-content/themes', 'web/app/themes');\"",
 			"php -r \"symlink('/var/opt/wp/wp-content/plugins', 'web/app/plugins');\"",
-			"php -r \"symlink('/var/opt/wp/wp-content/themes', 'web/app/themes');\""
+			"php -r \"rename('web/app/mu-plugins', '/var/opt/wp/wp-content/mu-plugins');\"",
+			"php -r \"symlink('/var/opt/wp/wp-content/mu-plugins', 'web/app/mu-plugins');\""
 		]
 	}
 }
