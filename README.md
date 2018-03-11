@@ -34,7 +34,7 @@ Replace `{directory}` with the name of your new project, e.g. its domain name.
 
 Composer will download and install WordPress, move it to `/var/opt/wp` and then symlink it to `{directory}/web/wp`. Composer will also symlink `/var/opt/wp/wp-content/themes` to `web/app/themes`, and `/var/opt/wp/wp-content/plugins` to `web/app/plugins`.
 
-All sites can now share this single instance of WordPress core including the themes and plugins directories.
+All sites can now share this single instance of WordPress core, themes and plugins.
 
 ## Configuration
 
@@ -68,7 +68,7 @@ Put custom core, theme and plugin constants in `{directory}/wp-constants.php`.
 
 To add sites, duplicate and rename `{directory}` and edit `{new_directory}/conf/.env` with the new site's database credentials. Add a vhost and set the document root to `/path/to/{new_directory}/web`.
 
-New sites will share the same instance of WordPress including the themes and plugins directories.
+New sites will share the same instance of WordPress core, themes and plugins configured by Composer.
 
 ## Credit
 
