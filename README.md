@@ -67,7 +67,7 @@ Add themes in `{directory}/web/app/themes` as you would for a normal WordPress i
 To add a plugin, use `composer require <namespace>/<packagename>` from the command-line. If it's from WordPress Packagist then the namespace is always `wpackagist-plugin`, e.g.:
 
 ```bash
-$ composer require wpackagist-plugin/jetpack:dev-trunk
+$ composer require wpackagist-plugin/jetpack:*
 ```
 
 Whenever you add a new plugin or update WordPress core, run `composer update` to install your new packages.
