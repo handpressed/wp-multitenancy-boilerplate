@@ -10,7 +10,7 @@ WordPress multitenancy boilerplate configured and managed with Composer and PHP 
 	- [Themes](#themes)
 	- [Plugins](#plugins)
 	- [Constants](#constants)
-- [Adding Sites](#adding-sites)
+- [Adding sites](#adding-sites)
 - [See also](#see-also)
 - [Credit](#credit)
 
