@@ -8,10 +8,10 @@
 /**
  * Load .env file (see: https://github.com/vlucas/phpdotenv).
  */
-require_once __DIR__ . '/vendor/autoload.php';
+require_once dirname( WP_ROOT ) . '/vendor/autoload.php';
 
-if ( file_exists( __DIR__ . '/conf/.env' ) ) {
-	$dotenv = new Dotenv\Dotenv( __DIR__ . '/conf' );
+if ( file_exists( dirname( WP_ROOT ) . '/conf/.env' ) ) {
+	$dotenv = new Dotenv\Dotenv( dirname( WP_ROOT ) . '/conf' );
 	$dotenv->load();
 	$dotenv->required( [ 'DB_NAME', 'DB_USER', 'DB_PASSWORD' ] );
 }
@@ -57,8 +57,8 @@ define( 'WP_CONTENT_DIR', WP_ROOT . WP_CONTENT_FOLDER );
 /**
  * Constants.
  */
-if ( file_exists( __DIR__ . '/wp-constants.php' ) ) {
-	require_once __DIR__ . '/wp-constants.php';
+if ( file_exists( dirname( WP_ROOT ) . '/conf/wp-constants.php' ) ) {
+	require_once dirname( WP_ROOT ) . '/conf/wp-constants.php';
 }
 
 if ( 'https' === $scheme ) {
@@ -75,15 +75,15 @@ define( 'WP_AUTO_UPDATE_CORE', 'minor' );
 /**
  * Authentication unique keys and salts.
  */
-if ( file_exists( __DIR__ . '/wp-salts.php' ) ) {
-	require_once __DIR__ . '/wp-salts.php';
+if ( file_exists( dirname( WP_ROOT ) . '/conf/wp-salts.php' ) ) {
+	require_once dirname( WP_ROOT ) . '/conf/wp-salts.php';
 }
 
 /**
  * Bootstrap WordPress.
  */
 if ( ! defined( 'ABSPATH' ) ) {
-	define( 'ABSPATH', __DIR__ . '/wp' );
+	define( 'ABSPATH', WP_ROOT . '/wp' );
 }
 
 /**

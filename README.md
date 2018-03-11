@@ -10,7 +10,7 @@ WordPress multitenancy boilerplate configured and managed with Composer and PHP 
 	- [Themes](#themes)
 	- [Plugins](#plugins)
 	- [Constants](#constants)
-- [Additional sites](#additional-sites)
+- [Adding sites](#adding-sites)
 - [See also](#see-also)
 - [Credit](#credit)
 
@@ -76,9 +76,9 @@ You can continue to use the WordPress admin to update themes and plugins (you do
 
 ### Constants
 
-Put custom core, theme and plugin constants in `{directory}/wp-constants.php`.
+Put custom core, theme and plugin constants in `{directory}/conf/wp-constants.php`.
 
-## Additional sites
+## Adding sites
 
 Coming soon...
 
