@@ -2,6 +2,18 @@
 
 WordPress multitenancy boilerplate configured and managed with Composer and PHP dotenv.
 
+- [Features](#features)
+- [Requirements](#requirements)
+- [Prerequisites](#prerequisites)
+- [Installation](#installation)
+- [Configuration](#configuration)
+	- [Themes](#themes)
+	- [Plugins](#plugins)
+	- [Constants](#constants)
+- [Adding Sites](#adding-sites)
+- [See also](#see-also)
+- [Credit](#credit)
+
 ## Features
 
 - Improved directory structure
@@ -66,9 +78,11 @@ Put custom core, theme and plugin constants in `{directory}/wp-constants.php`.
 
 ## Adding Sites
 
-To add sites, duplicate and rename `{directory}` and edit `{new_directory}/conf/.env` with the new site's database credentials. Add a vhost and set the document root to `/path/to/{new_directory}/web`.
+Coming soon...
 
-New sites will share the same instance of WordPress core, themes and plugins configured by Composer.
+## See also
+
+[WordPress Dotenv Boilerplate](https://github.com/handpressed/wp-env-boilerplate)
 
 ## Credit
 
