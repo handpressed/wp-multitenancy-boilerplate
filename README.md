@@ -10,7 +10,7 @@ WordPress multitenancy boilerplate configured and managed with Composer and PHP 
 	- [Themes](#themes)
 	- [Plugins](#plugins)
 	- [Constants](#constants)
-- [Adding sites](#adding-sites)
+- [Additional sites](#additional-sites)
 - [See also](#see-also)
 - [Credit](#credit)
 
@@ -46,7 +46,7 @@ Replace `{directory}` with the name of your new project, e.g. its domain name.
 
 Composer will download and install WordPress, move it to `/var/opt/wp` and then symlink it to `{directory}/web/wp`. Composer will also symlink `/var/opt/wp/wp-content/themes` to `web/app/themes`, and `/var/opt/wp/wp-content/plugins` to `web/app/plugins`.
 
-All sites can now share this single instance of WordPress core, themes and plugins.
+Sites can now share this single instance of WordPress core, themes and plugins.
 
 ## Configuration
 
@@ -76,7 +76,7 @@ You can continue to use the WordPress admin to update themes and plugins (you do
 
 Put custom core, theme and plugin constants in `{directory}/wp-constants.php`.
 
-## Adding sites
+## Additional sites
 
 Coming soon...
 
