@@ -29,7 +29,7 @@ $table_prefix = getenv( '$table_prefix' ) ?: 'wp_';
 /**
  * URLs.
  */
-define( 'WP_HOME', getenv( 'WP_HOME' ) );
+define( 'WP_HOME', rtrim( getenv( 'WP_HOME' ), '/' ) );
 define( 'WP_SITEURL', WP_HOME . '/wp' );
 
 /**
