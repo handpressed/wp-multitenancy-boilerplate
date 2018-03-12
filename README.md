@@ -49,7 +49,7 @@ Composer will download WordPress, move it to `/var/opt/wp` and then symlink `/va
 
 Composer will also symlink `/var/opt/wp/wp-content/themes` to `web/app/themes`, `/var/opt/wp/wp-content/plugins` to `web/app/plugins` and `/var/opt/wp/wp-content/mu-plugins` to `web/app/mu-plugins`.
 
-Sites can now share this single instance of WordPress core, themes and plugins.
+Sites can now share this single instance of WordPress.
 
 ## Configuration
 
