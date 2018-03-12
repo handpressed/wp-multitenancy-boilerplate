@@ -57,7 +57,7 @@
 	},
 	"scripts": {
 		"generate-salts": [
-			"echo '<?php' > config/wp-salts.php && curl -L https://api.wordpress.org/secret-key/1.1/salt/ >> config/wp-salts.php"
+			"echo '<?php' > conf/wp-salts.php && curl -L https://api.wordpress.org/secret-key/1.1/salt/ >> conf/wp-salts.php"
 		],
 		"post-create-project-cmd": [
 			"composer run generate-salts",

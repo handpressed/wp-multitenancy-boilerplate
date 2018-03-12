@@ -84,7 +84,7 @@ Put custom core, theme and plugin constants in `{directory}/conf/wp-constants.ph
 ## Directory structure
 
     ├── composer.json             → Manage versions of WordPress, plugins and dependencies
-    ├── config                    → WordPress configuration files
+    ├── conf                      → WordPress configuration files
     │   ├── .env       	      → WordPress environment variables (DB_NAME, DB_USER, DB_PASSWORD required)
     │   ├── wp-constants.php      → Custom core, theme and plugin constants
     │   ├── wp-env-config.php     → Primary WordPress config file (wp-config.php equivalent)
