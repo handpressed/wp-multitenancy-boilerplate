@@ -13,6 +13,7 @@ if ( ! defined( 'WP_ROOT' ) ) {
 }
 
 if ( file_exists( dirname( WP_ROOT ) . '/conf/wp-env-config.php' ) ) {
+	require_once dirname( WP_ROOT ) . '/vendor/autoload.php';
 	require_once dirname( WP_ROOT ) . '/conf/wp-env-config.php';
 } else {
 	die( 'wp-env-config.php not found' );

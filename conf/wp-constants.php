@@ -3,7 +3,7 @@
  * Custom constants.
  */
 if ( ! defined( 'WP_CACHE' ) ) {
-	define( 'WP_CACHE', true );
+	define( 'WP_CACHE', false );
 }
 
 define( 'WP_DEBUG', false );

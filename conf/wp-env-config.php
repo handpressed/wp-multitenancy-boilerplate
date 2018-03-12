@@ -8,8 +8,6 @@
 /**
  * Load .env file (see: https://github.com/vlucas/phpdotenv).
  */
-require_once dirname( WP_ROOT ) . '/vendor/autoload.php';
-
 if ( file_exists( dirname( WP_ROOT ) . '/conf/.env' ) ) {
 	$dotenv = new Dotenv\Dotenv( dirname( WP_ROOT ) . '/conf' );
 	$dotenv->load();
