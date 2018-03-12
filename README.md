@@ -124,8 +124,8 @@ Added sites will use the existing WordPress instance (including themes and plugi
 
 ## See also
 
-[WordPress Dotenv Boilerplate](https://github.com/handpressed/wp-env-boilerplate)
+[WordPress Composer Boilerplate](https://github.com/handpressed/wp-composer-boilerplate)
 
 ## Credit
 
-Based on [handpressed/wp-env-boilerplate](https://github.com/handpressed/wp-env-boilerplate). Inspired by [roots/bedrock](https://github.com/roots/bedrock) and [wpscholar/wp-skeleton](https://github.com/wpscholar/wp-skeleton).
+Based on [handpressed/wp-composer-boilerplate](https://github.com/handpressed/wp-composer-boilerplate). Inspired by [roots/bedrock](https://github.com/roots/bedrock) and [wpscholar/wp-skeleton](https://github.com/wpscholar/wp-skeleton).
