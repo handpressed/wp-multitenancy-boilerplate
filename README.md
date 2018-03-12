@@ -75,7 +75,7 @@ Whenever you add a new plugin or update WordPress core, run `composer update` to
 
 Themes and plugins are installed in the symlinked `themes` and `plugins` directories in `/var/opt/wp/wp-content` and will be available to all multitenancy sites.
 
-Note: Some plugins may make modifications to the core `wp-config.php` file. Any modifications to `wp-config.php` that are needed by an individual site should be moved to the site's `{directory}/config/wp-constants.php` file.
+Note: Some plugins may make modifications to the core `wp-config.php` file. Any modifications to `wp-config.php` that are needed by an individual site should be moved to the site's `{directory}/conf/wp-constants.php` file.
 
 ### Constants
 
