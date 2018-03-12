@@ -53,7 +53,7 @@ Sites can now share this single instance of WordPress.
 
 ## Configuration
 
-Open the `{directory}/conf/.env` file and add your new site's database credentials (`DB_NAME`, `DB_USER`, `DB_PASSWORD`) and define a database `$table_prefix` (default is `wp_`).
+Open the `{directory}/conf/.env` file and add your new site's domain name (`WP_DOMAIN`) and database credentials (`DB_NAME`, `DB_USER`, `DB_PASSWORD`). You can also define the database `$table_prefix` (default is `wp_`) if required.
 
 Set your site's vhost document root to `/path/to/{directory}/web`.
 

@@ -1,6 +1,6 @@
 <?php
 /**
- * Credential-free wp-config.php (ideal for multitenancy setups).
+ * Credential-free wp-config.php.
  *
  * @package WordPress
  */
@@ -36,7 +36,7 @@ $scheme = $is_ssl ? 'https' : 'http';
  * Define domain.
  */
 if ( ! defined( 'WP_DOMAIN' ) ) {
-	define( 'WP_DOMAIN', getenv( 'SERVER_NAME' ) );
+	define( 'WP_DOMAIN', getenv( 'WP_DOMAIN' ) );
 }
 
 /**
