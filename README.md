@@ -116,7 +116,7 @@ Replace `{new_directory}` with the name of your new project, e.g. its domain nam
 
 Open the `{directory}/conf/.env` file and add the new site's home URL (`WP_HOME`) and database credentials (`DB_NAME`, `DB_USER`, `DB_PASSWORD`). You can also define the database `$table_prefix` (default is `wp_`) if required.
 
-Set your new site's vhost document root to `/path/to/{new_directory}/web`.
+Set the new site's vhost document root to `/path/to/{new_directory}/web`.
 
 Added sites will use the existing WordPress instance (including themes and plugins) in `var/opt/wp`.
 
