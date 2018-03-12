@@ -37,7 +37,7 @@
 		"composer/installers": "@stable",
 		"vlucas/phpdotenv": "^2.4",
 		"roots/wp-password-bcrypt": "1.0.0",
-		"handpressed/wp-multitenancy-add-site": "*"
+		"handpressed/wp-multitenancy-add-site": "dev-master"
 	},
 	"suggest": {
 		"wp-cli/wp-cli": "@stable"
