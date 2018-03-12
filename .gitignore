@@ -1,19 +1,24 @@
-# Application
+# Application (plugins ignored since Composer manages them).
 web/app/plugins/*
-!web/app/plugins/.gitkeep
-web/app/mu-plugins/*/
+!web/app/plugins/index.php
+web/app/mu-plugins/*
+!web/app/mu-plugins/index.php
+
+# Add plugins not managed by Composer.
+#!web/app/plugins/plugin-name
+
 web/app/upgrade
 web/app/uploads/*
-!web/app/uploads/.gitkeep
+!web/app/uploads/index.php
 
 # WordPress
 web/wp
 
-# Dotenv
+# PHP dotenv
 .env
 .env.*
 !.env.example
 
 # Composer
 vendor/*
-!vendor/.gitkeep
+!vendor/index.php

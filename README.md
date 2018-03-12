@@ -1,6 +1,6 @@
 # WordPress Multitenancy Boilerplate
 
-WordPress multitenancy boilerplate configured and managed with Composer and PHP dotenv.
+Use Composer to configure and manage a WordPress instance (including themes and plugins) that's shared with multiple sites.
 
 - [Features](#features)
 - [Requirements](#requirements)
@@ -52,7 +52,7 @@ Sites can now share this single instance of WordPress core, themes and plugins.
 
 ## Configuration
 
-Open the `{directory}/conf/.env` file and add your site's database credentials, including `$table_prefix` (default is `wp_`).
+Open the `{directory}/conf/.env` file and add your new site's database credentials (`DB_NAME`, `DB_USER`, `DB_PASSWORD`) and define a database `$table_prefix` (default is `wp_`).
 
 Set your site's vhost document root to `/path/to/{directory}/web`.
 
@@ -73,6 +73,8 @@ $ composer require wpackagist-plugin/jetpack:*
 Whenever you add a new plugin or update WordPress core, run `composer update` to install your new packages.
 
 You can continue to use the WordPress admin to update themes and plugins (you don’t have to worry about breaking your install or being out-of-sync with your `composer.json` file).
+
+Note: Some plugins may create files or directories outside of their given scope, or even make modifications to `wp-config.php` and other files in the `app` directory. Any modifications to `wp-config.php` that are required should be moved to a site's `config/wp-constants.php` file.
 
 ### Constants
 
