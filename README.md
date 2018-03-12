@@ -74,11 +74,30 @@ Whenever you add a new plugin or update WordPress core, run `composer update` to
 
 You can continue to use the WordPress admin to update themes and plugins (you don’t have to worry about breaking your install or being out-of-sync with your `composer.json` file).
 
-Note: Some plugins may create files or directories outside of their given scope, or even make modifications to `wp-config.php` and other files in the `app` directory. Any modifications to `wp-config.php` that are required should be moved to a site's `config/wp-constants.php` file.
+Note: Some plugins may make modifications to the core `wp-config.php` file and other files in the `app` directory. Any modifications to `wp-config.php` that are required should be moved to an individual site's `config/wp-constants.php` file.
 
 ### Constants
 
 Put custom core, theme and plugin constants in `{directory}/conf/wp-constants.php`.
+
+## Directory structure
+
+    ├── composer.json             → Manage versions of WordPress, plugins and dependencies
+    ├── config                    → WordPress configuration files
+    │   ├── .env       	      → WordPress environment variables (DB_NAME, DB_USER, DB_PASSWORD required)
+    │   ├── wp-constants.php      → Custom core, theme and plugin constants
+    │   ├── wp-env-config.php     → Primary WordPress config file (wp-config.php equivalent)
+    │   └── wp-salts.php          → Authentication unique keys and salts (auto generated)
+    ├── vendor                    → Composer packages (never edit)
+    └── web                       → Web root (vhost document root)
+        ├── app                   → wp-content equivalent
+        │   ├── mu-plugins        ↔ Must-use plugins symlinked to /var/opt/wp/wp-content/mu-plugins
+        │   ├── plugins           ↔ Plugins Must-use plugins symlinked to /var/opt/wp/wp-content/plugins
+        │   ├── themes            ↔ Themes Must-use plugins symlinked to /var/opt/wp/wp-content/themes
+        │   └── uploads           → Uploads
+        ├── index.php             → Loads the WordPress environment and template (never edit)
+        └── wp                    ↔ WordPress core symlinked to /var/opt/wp (never edit)
+	    	└── wp-config.php     ↔ Required by WordPress - loads conf/wp-env-config.php (never edit)
 
 ## Adding sites
 
