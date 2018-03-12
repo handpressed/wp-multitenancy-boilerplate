@@ -110,6 +110,8 @@ Use [WP Multitenancy Add Site](https://github.com/handpressed/wp-multitenancy-ad
 $ composer create-project handpressed/wp-multitenancy-add-site {new_directory}
 ```
 
+Replace `{new_directory}` with the name of your new project, e.g. its domain name.
+
 ### Configuration
 
 Open the `{new_directory}/conf/.env` file and add your new site's database credentials (`DB_NAME`, `DB_USER`, `DB_PASSWORD`) and define a database `$table_prefix` (default is `wp_`).
