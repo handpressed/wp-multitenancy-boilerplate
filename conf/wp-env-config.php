@@ -53,8 +53,7 @@ if ( 'https' === $protocol ) {
 	define( 'FORCE_SSL_ADMIN', true );
 }
 
-define( 'COOKIE_DOMAIN', WP_HOME );
-define( 'WP_CACHE_KEY_SALT', WP_HOME . '_' );
+define( 'WP_CACHE_KEY_SALT', getenv( 'SERVER_NAME' ) . '_' );
 define( 'FS_CHMOD_DIR', ( 0755 & ~ umask() ) );
 define( 'FS_CHMOD_FILE', ( 0644 & ~ umask() ) );
 define( 'WP_AUTO_UPDATE_CORE', 'minor' );
