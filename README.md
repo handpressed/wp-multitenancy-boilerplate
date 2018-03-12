@@ -98,7 +98,7 @@ Put custom core, theme and plugin constants in `{directory}/conf/wp-constants.ph
         │   └── uploads           → Uploads
         ├── index.php             → Loads the WordPress environment and template (never edit)
         └── wp                    ↔ WordPress core symlinked to /var/opt/wp (never edit)
-	    	└── wp-config.php     ↔ Required by WordPress - loads conf/wp-env-config.php (never edit)
+	    	└── wp-config.php     → Required by WordPress - loads conf/wp-env-config.php (never edit)
 
 `↔` denotes a symlink.
 
