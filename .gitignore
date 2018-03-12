@@ -3,6 +3,7 @@ web/app/plugins/*
 !web/app/plugins/index.php
 web/app/mu-plugins/*
 !web/app/mu-plugins/index.php
+!web/app/mu-plugins/disallow-indexing.php
 
 # Add plugins not managed by Composer.
 #!web/app/plugins/plugin-name
