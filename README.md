@@ -104,7 +104,19 @@ Put custom core, theme and plugin constants in `{directory}/conf/wp-constants.ph
 
 ## Adding sites
 
-Coming soon...
+Use [WP Multitenancy Add Site](https://github.com/handpressed/wp-multitenancy-add-site).
+
+```bash
+$ composer create-project handpressed/wp-multitenancy-add-site {new_directory}
+```
+
+### Configuration
+
+Open the `{new_directory}/conf/.env` file and add your new site's database credentials (`DB_NAME`, `DB_USER`, `DB_PASSWORD`) and define a database `$table_prefix` (default is `wp_`).
+
+Set your new site's vhost document root to `/path/to/{new_directory}/web`.
+
+Added sites will use the existing WordPress instance (including themes and plugins) in `var/opt/wp`.
 
 ## See also
 
