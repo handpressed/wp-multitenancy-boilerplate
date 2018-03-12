@@ -21,7 +21,7 @@ WordPress multitenancy boilerplate configured and managed with Composer and PHP 
 - Easy WordPress configuration with constants and environment files
 - Environment variables with [PHP dotenv](https://github.com/vlucas/phpdotenv)
 - Enhanced security (separated web root and secure passwords with [roots/wp-password-bcrypt](https://github.com/roots/wp-password-bcrypt))
-- WordPress [multitenancy](https://en.wikipedia.org/wiki/Multitenancy) (a single instance of WordPress core, themes and plugins serves multiple sites)
+- WordPress [multitenancy](https://en.wikipedia.org/wiki/Multitenancy) (a single instance of WordPress core, themes and plugins serving multiple sites)
 
 ## Requirements
 
