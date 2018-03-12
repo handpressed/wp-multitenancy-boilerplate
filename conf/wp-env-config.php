@@ -11,7 +11,7 @@
 if ( file_exists( dirname( WP_ROOT ) . '/conf/.env' ) ) {
 	$dotenv = new Dotenv\Dotenv( dirname( WP_ROOT ) . '/conf' );
 	$dotenv->load();
-	$dotenv->required( [ 'DB_NAME', 'DB_USER', 'DB_PASSWORD' ] );
+	$dotenv->required( [ 'WP_DOMAIN', 'DB_NAME', 'DB_USER', 'DB_PASSWORD' ] );
 }
 
 /**
