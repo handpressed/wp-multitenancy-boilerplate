@@ -75,7 +75,7 @@ Whenever you add a new plugin or update WordPress core, run `composer update` to
 
 You can continue to use the WordPress admin to update themes and plugins (you don’t have to worry about breaking your install or being out-of-sync with your `composer.json` file).
 
-Note: Some plugins may make modifications to the core `wp-config.php` file and other files in the `app` directory. Any modifications to `wp-config.php` that are required should be moved to an individual site's `config/wp-constants.php` file.
+Note: Some plugins may make modifications to the core `wp-config.php`. Any modifications to `wp-config.php` that are required should be moved to an individual site's `config/wp-constants.php` file.
 
 ### Constants
 
