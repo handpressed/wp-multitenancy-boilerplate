@@ -73,7 +73,9 @@ $ composer require wpackagist-plugin/jetpack:*
 
 Whenever you add a new plugin or update WordPress core, run `composer update` to install your new packages.
 
-You can continue to use the WordPress admin to update themes and plugins (you don’t have to worry about breaking your install or being out-of-sync with your `composer.json` file).
+Themes and plugins are installed in the symlinked directories in `/var/opt/wp` and will be available to all multitenancy sites.
+
+You can continue to use the WordPress admin to update themes and plugins.
 
 Note: Some plugins may make modifications to the core `wp-config.php` file. Any modifications to `wp-config.php` that are required should be moved to an individual site's `config/wp-constants.php` file.
 
