@@ -10,9 +10,9 @@ Use Composer to configure and manage a WordPress instance (including themes and 
 	- [Themes](#themes)
 	- [Plugins](#plugins)
 	- [Constants](#constants)
-- [Directory structure](#directory-structure)
-- [Adding sites](#adding-sites)
-- [See also](#see-also)
+- [Directory Structure](#directory-structure)
+- [Adding Sites](#adding-sites)
+- [See Also](#see-also)
 - [Credit](#credit)
 
 ## Features
@@ -81,7 +81,7 @@ Note: Some plugins may make modifications to the core `wp-config.php` file. Any 
 
 Put custom core, theme and plugin constants in `conf/wp-constants.php`.
 
-## Directory structure
+## Directory Structure
 
     ├── composer.json             → Manage versions of WordPress, plugins and dependencies
     ├── conf                      → WordPress configuration files
@@ -102,7 +102,7 @@ Put custom core, theme and plugin constants in `conf/wp-constants.php`.
 
 `↔` denotes a symlink.
 
-## Adding sites
+## Adding Sites
 
 Use [WP Multitenancy Add Site](https://github.com/handpressed/wp-multitenancy-add-site).
 
@@ -120,7 +120,7 @@ Set the new site's vhost document root to `/path/to/{new_directory}/web`.
 
 Added sites will use the existing WordPress instance (including themes and plugins) in `var/opt/wp`.
 
-## See also
+## See Also
 
 [WordPress Composer Boilerplate](https://github.com/handpressed/wp-composer-boilerplate)
 
