@@ -41,11 +41,13 @@ $ curl -sS https://getcomposer.org/installer | php && mv composer.phar /usr/loca
 
 ```bash
 $ composer create-project handpressed/wp-multitenancy-boilerplate {directory}
+
+$ cd {directory}
 ```
 
 Replace `{directory}` with the name of your new project, e.g. its domain name.
 
-Composer will download WordPress, move it to `/var/opt/wp` and then symlink `/var/opt/wp` to `{directory}/web/wp`.
+Composer will download WordPress, move it to `/var/opt/wp` and then symlink `/var/opt/wp` to `web/wp`.
 
 Composer will also symlink `/var/opt/wp/wp-content/themes` to `web/app/themes`, `/var/opt/wp/wp-content/plugins` to `web/app/plugins` and `/var/opt/wp/wp-content/mu-plugins` to `web/app/mu-plugins`.
 
@@ -53,13 +55,13 @@ Sites can now share this single instance of WordPress.
 
 ## Configuration
 
-Open the `{directory}/conf/.env` file and add your new site's home URL (`WP_HOME`) and database credentials (`DB_NAME`, `DB_USER`, `DB_PASSWORD`). You can also define the database `$table_prefix` (default is `wp_`) if required.
+Open the `conf/.env` file and add your new site's home URL (`WP_HOME`) and database credentials (`DB_NAME`, `DB_USER`, `DB_PASSWORD`). You can also define the database `$table_prefix` (default is `wp_`) if required.
 
 Set your site's vhost document root to `/path/to/{directory}/web`.
 
 ### Themes
 
-Add themes in `{directory}/web/app/themes` as you would for a normal WordPress install.
+Add themes in `web/app/themes` as you would for a normal WordPress install.
 
 ### Plugins
 
@@ -108,13 +110,15 @@ Use [WP Multitenancy Add Site](https://github.com/handpressed/wp-multitenancy-ad
 
 ```bash
 $ composer create-project handpressed/wp-multitenancy-add-site {new_directory}
+
+$ cd {new_directory}
 ```
 
 Replace `{new_directory}` with the name of your new project, e.g. its domain name.
 
 ### Configuration
 
-Open the `{new_directory}/conf/.env` file and add the new site's home URL (`WP_HOME`) and database credentials (`DB_NAME`, `DB_USER`, `DB_PASSWORD`). You can also define the database `$table_prefix` (default is `wp_`) if required.
+Open the `conf/.env` file and add the new site's home URL (`WP_HOME`) and database credentials (`DB_NAME`, `DB_USER`, `DB_PASSWORD`). You can also define the database `$table_prefix` (default is `wp_`) if required.
 
 Set the new site's vhost document root to `/path/to/{new_directory}/web`.
 
@@ -122,8 +126,8 @@ Added sites will use the existing WordPress instance (including themes and plugi
 
 ## See Also
 
-[WordPress Composer Boilerplate](https://github.com/handpressed/wp-composer-boilerplate)
+[WordPress Substratum](https://github.com/handpressed/substratum)
 
 ## Credit
 
-Based on [handpressed/wp-composer-boilerplate](https://github.com/handpressed/wp-composer-boilerplate). Inspired by [roots/bedrock](https://github.com/roots/bedrock) and [wpscholar/wp-skeleton](https://github.com/wpscholar/wp-skeleton).
+Based on [handpressed/substratum](https://github.com/handpressed/substratum). Inspired by [roots/bedrock](https://github.com/roots/bedrock) and [wpscholar/wp-skeleton](https://github.com/wpscholar/wp-skeleton).
