@@ -8,10 +8,6 @@
 /**
  * Load .env file (see: https://github.com/vlucas/phpdotenv).
  */
-if ( ! defined( 'WP_ROOT' ) ) {
-	define( 'WP_ROOT', getenv( 'DOCUMENT_ROOT' ) );
-}
-
 if ( file_exists( dirname( WP_ROOT ) . '/conf/.env' ) ) {
 	$dotenv = new Dotenv\Dotenv( dirname( WP_ROOT ) . '/conf' );
 	$dotenv->load();
