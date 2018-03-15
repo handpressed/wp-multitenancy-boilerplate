@@ -36,6 +36,7 @@
 		"johnpbloch/wordpress": "@stable",
 		"composer/installers": "@stable",
 		"vlucas/phpdotenv": "^2.4",
+		"oscarotero/env": "^1.1.0",
 		"roots/wp-password-bcrypt": "1.0.0"
 	},
 	"suggest": {
@@ -61,7 +62,7 @@
 		],
 		"post-create-project-cmd": [
 			"composer run generate-salts",
-			"php -r \"rename('conf/.env.example', 'conf/.env');\"",
+			"php -r \"rename('.env.example', '.env');\"",
 			"php -r \"rename('web/wp-config.php', 'web/wp/wp-config.php');\"",
 			"php -r \"rename('web/wp', '/var/opt/wp');\"",
 			"php -r \"symlink('/var/opt/wp', 'web/wp');\"",
