@@ -74,6 +74,11 @@ define( 'FS_CHMOD_DIR', ( 0755 & ~ umask() ) );
 define( 'FS_CHMOD_FILE', ( 0644 & ~ umask() ) );
 define( 'WP_AUTO_UPDATE_CORE', 'minor' );
 
+/**
+ * Disable all file modifications including updates and update notifications.
+ */
+define( 'DISALLOW_FILE_MODS', true );
+
 if ( file_exists( $root_dir . '/conf/wp-constants.php' ) ) {
 	require_once $root_dir . '/conf/wp-constants.php';
 }
