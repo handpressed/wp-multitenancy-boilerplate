@@ -47,7 +47,7 @@ $ cd {directory}
 
 Replace `{directory}` with the name of your new project, e.g. its domain name.
 
-Composer will download WordPress, move it to `/var/opt/wp` and then symlink `/var/opt/wp` to `web/wp`.
+Composer will download WordPress, move it to `/var/opt/wp` and then symlink `/var/opt/wp` to `web/wp` (see [Directory Structure](#directory-structure)).
 
 Composer will also symlink `/var/opt/wp/wp-content/themes` to `web/app/themes`, `/var/opt/wp/wp-content/plugins` to `web/app/plugins` and `/var/opt/wp/wp-content/mu-plugins` to `web/app/mu-plugins`.
 
