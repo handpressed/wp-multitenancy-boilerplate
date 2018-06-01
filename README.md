@@ -2,18 +2,20 @@
 
 Use Composer to configure and manage a WordPress instance (including themes and plugins) that's shared with multiple sites.
 
-- [Features](#features)
-- [Requirements](#requirements)
-- [Prerequisites](#prerequisites)
-- [Installation](#installation)
-- [Configuration](#configuration)
-	- [Themes](#themes)
-	- [Plugins](#plugins)
-	- [Constants](#constants)
-- [Directory Structure](#directory-structure)
-- [Adding Sites](#adding-sites)
-- [See Also](#see-also)
-- [Credit](#credit)
+- [WordPress Multitenancy Boilerplate](#wordpress-multitenancy-boilerplate)
+	- [Features](#features)
+	- [Requirements](#requirements)
+	- [Prerequisites](#prerequisites)
+	- [Installation](#installation)
+	- [Configuration](#configuration)
+		- [Themes](#themes)
+		- [Plugins](#plugins)
+		- [Constants](#constants)
+	- [Directory Structure](#directory-structure)
+	- [Adding Sites](#adding-sites)
+		- [Configuration](#configuration)
+	- [See Also](#see-also)
+	- [Credit](#credit)
 
 ## Features
 
@@ -45,7 +47,7 @@ $ composer create-project handpressed/wp-multitenancy-boilerplate {directory}
 $ cd {directory}
 ```
 
-Replace `{directory}` with the name of your new project, e.g. its domain name.
+Replace `{directory}` with the name of your new WordPress project, e.g. its domain name.
 
 Composer will download WordPress, move it to `/var/opt/wp` and then symlink `/var/opt/wp` to `web/wp` (see [Directory Structure](#directory-structure)).
 
