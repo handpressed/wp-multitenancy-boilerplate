@@ -1,8 +1,7 @@
 {
 	"name": "handpressed/wp-multitenancy-boilerplate",
-	"description": "WordPress multitenancy boilerplate configured and managed with Composer and PHP dotenv.",
-	"license": "MIT",
 	"type": "project",
+	"description": "WordPress multitenancy boilerplate configured and managed with Composer and PHP dotenv.",
 	"keywords": [
 		"WordPress",
 		"multitenancy",
@@ -13,6 +12,7 @@
 		"composer",
 		"wpackagist"
 	],
+	"license": "MIT",
 	"authors": [
 		{
 			"name": "Nicholas at HandPressed",
@@ -21,29 +21,18 @@
 			"role": "Developer"
 		}
 	],
-	"support": {
-		"source": "https://github.com/handpressed/wp-multitenancy-boilerplate",
-		"issues": "https://github.com/handpressed/wp-multitenancy-boilerplate/issues"
-	},
-	"repositories": {
-		"wpackagist": {
-			"type": "composer",
-			"url": "https://wpackagist.org"
-		}
-	},
 	"require": {
 		"php": ">=7.1",
-		"johnpbloch/wordpress": "@stable",
 		"composer/installers": "@stable",
-		"vlucas/phpdotenv": "^2.4",
+		"johnpbloch/wordpress": "@stable",
 		"oscarotero/env": "^1.1.0",
-		"roots/wp-password-bcrypt": "1.0.0"
+		"roots/wp-password-bcrypt": "1.0.0",
+		"vlucas/phpdotenv": "^2.4"
 	},
 	"suggest": {
 		"wp-cli/wp-cli": "@stable"
 	},
 	"extra": {
-		"wordpress-install-dir": "web/wp",
 		"installer-paths": {
 			"web/app/mu-plugins/{$name}": [
 				"type:wordpress-muplugin"
@@ -54,12 +43,16 @@
 			"web/app/themes/{$name}": [
 				"type:wordpress-theme"
 			]
+		},
+		"wordpress-install-dir": "web/wp"
+	},
+	"repositories": {
+		"wpackagist": {
+			"type": "composer",
+			"url": "https://wpackagist.handpressed.net"
 		}
 	},
 	"scripts": {
-		"generate-salts": [
-			"echo '<?php' > conf/wp-salts.php && curl -L https://api.wordpress.org/secret-key/1.1/salt/ >> conf/wp-salts.php"
-		],
 		"post-create-project-cmd": [
 			"composer run generate-salts",
 			"php -r \"rename('.env.example', '.env');\"",
@@ -70,6 +63,13 @@
 			"php -r \"symlink('/var/opt/wp/wp-content/plugins', 'web/app/plugins');\"",
 			"php -r \"rename('web/app/mu-plugins', '/var/opt/wp/wp-content/mu-plugins');\"",
 			"php -r \"symlink('/var/opt/wp/wp-content/mu-plugins', 'web/app/mu-plugins');\""
+		],
+		"generate-salts": [
+			"echo '<?php' > conf/wp-salts.php && curl -L https://api.wordpress.org/secret-key/1.1/salt/ >> conf/wp-salts.php"
 		]
+	},
+	"support": {
+		"issues": "https://github.com/handpressed/wp-multitenancy-boilerplate/issues",
+		"source": "https://github.com/handpressed/wp-multitenancy-boilerplate"
 	}
 }
