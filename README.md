@@ -27,7 +27,7 @@ Use Composer to configure and manage a WordPress instance (including themes and 
 
 ## Requirements
 
-- PHP 7.2+
+- PHP 7.3+
 - Composer
 
 ## Prerequisites
