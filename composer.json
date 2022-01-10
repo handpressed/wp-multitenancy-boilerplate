@@ -22,7 +22,7 @@
 		}
 	],
 	"require": {
-		"php": ">=7.2",
+		"php": ">=7.3",
 		"composer/installers": "@stable",
 		"johnpbloch/wordpress": "@stable",
 		"oscarotero/env": "^1.1.0",
@@ -49,7 +49,7 @@
 	"repositories": {
 		"wpackagist": {
 			"type": "composer",
-			"url": "https://wpackagist.handpressed.net"
+			"url": "https://wpackagist.org/"
 		}
 	},
 	"scripts": {
