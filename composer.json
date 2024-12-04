@@ -4,13 +4,7 @@
 	"description": "WordPress multitenancy boilerplate configured and managed with Composer and PHP dotenv.",
 	"keywords": [
 		"WordPress",
-		"multitenancy",
-		"boilerplate",
-		"phpdotenv",
-		"CMS",
-		"framework",
-		"composer",
-		"wpackagist"
+		"multitenancy"
 	],
 	"license": "MIT",
 	"authors": [
@@ -22,7 +16,7 @@
 		}
 	],
 	"require": {
-		"php": ">=7.3",
+		"php": ">=8.1",
 		"composer/installers": "@stable",
 		"johnpbloch/wordpress": "@stable",
 		"oscarotero/env": "^1.1.0",
