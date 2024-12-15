@@ -41,7 +41,7 @@ $ curl -sS https://getcomposer.org/installer | php && mv composer.phar /usr/loca
 ## Installation
 
 ```bash
-$ composer create-project handpressed/wp-multitenancy-boilerplate {directory}
+$ composer create-project handpressed/wp-multitenancy-boilerplate:dev-main {directory}
 
 $ cd {directory}
 ```
